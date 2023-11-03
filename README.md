@@ -236,13 +236,13 @@ Sometimes, higher accuracy might be misleading due to data imbalance.
 
 Here's how to interpret it:
 
-    - The top-left element (4908) is the number of true negatives (TN), which indicates the number of non-bankrupt companies correctly predicted as non-bankrupt.
+- The top-left element (4908) is the number of true negatives (TN), which indicates the number of non-bankrupt companies correctly predicted as non-bankrupt.
 
-    - The top-right element (41) is the number of false positives (FP), which indicates the number of non-bankrupt companies incorrectly predicted as bankrupt.
+- The top-right element (41) is the number of false positives (FP), which indicates the number of non-bankrupt companies incorrectly predicted as bankrupt.
 
-    - The bottom-left element (161) is the number of false negatives (FN), which indicates the number of bankrupt companies incorrectly predicted as non-bankrupt.
+- The bottom-left element (161) is the number of false negatives (FN), which indicates the number of bankrupt companies incorrectly predicted as non-bankrupt.
 
-    - The bottom-right element (4) is the number of true positives (TP), which indicates the number of bankrupt companies correctly predicted as bankrupt.
+- The bottom-right element (4) is the number of true positives (TP), which indicates the number of bankrupt companies correctly predicted as bankrupt.
 
 And, **the output represents the confusion matrix for testing data.**
 
@@ -250,13 +250,13 @@ And, **the output represents the confusion matrix for testing data.**
 
 Here's how to interpret it:
 
-    - True Negatives (TN): The model correctly identified 1633 instances as Non-Bankrupt Companies.
+- True Negatives (TN): The model correctly identified 1633 instances as Non-Bankrupt Companies.
 
-    - False Positives (FP): The model incorrectly classified 17 instances as Bankrupt Companies, which were actually Non-Bankrupt Companies.
+- False Positives (FP): The model incorrectly classified 17 instances as Bankrupt Companies, which were actually Non-Bankrupt Companies.
 
-    - False Negatives (FN): The model failed to identify 55 instances as Bankrupt Companies, misclassifying them as Non-Bankrupt Companies.
+- False Negatives (FN): The model failed to identify 55 instances as Bankrupt Companies, misclassifying them as Non-Bankrupt Companies.
 
-    - True Positives (TP): The model correctly identified Bankrupt Companies. 
+- True Positives (TP): The model correctly identified Bankrupt Companies. 
 
 
 ### Classification Report
