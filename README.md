@@ -275,13 +275,13 @@ Here's how to interpret it:
 
 **Analysis:**
 
-Precision: For the non-bankrupt companies, when the model predicts they are non-bankrupt, it's right about 97% of the time. For bankrupt companies, when the model predicts they are bankrupt, it's right only about 9% of the time.
+**Precision:** For the non-bankrupt companies, when the model predicts they are non-bankrupt, it's right about 97% of the time. For bankrupt companies, when the model predicts they are bankrupt, it's right only about 9% of the time.
 
-Recall: The model is very good at correctly identifying non-bankrupt companies, getting it right almost all the time (99%). However, it struggles to correctly identify bankrupt companies, getting it right only about 2% of the time.
+**Recall:** The model is very good at correctly identifying non-bankrupt companies, getting it right almost all the time (99%). However, it struggles to correctly identify bankrupt companies, getting it right only about 2% of the time.
 
-F1-score: Overall, the model is quite good at correctly identifying non-bankrupt companies, achieving a balance between precision and recall (98%). However, it has difficulty identifying bankrupt companies, with a lower score (4%).
+**F1-score:** Overall, the model is quite good at correctly identifying non-bankrupt companies, achieving a balance between precision and recall (98%). However, it has difficulty identifying bankrupt companies, with a lower score (4%).
 
-Accuracy: The overall accuracy of the model on the training data is 0.96, meaning that the model is correct in its predictions 96% of the time. However, since the classes are imbalanced, accuracy alone might not be the most reliable metric for model evaluation.
+**Accuracy:** The overall accuracy of the model on the training data is 0.96, meaning that the model is correct in its predictions 96% of the time. However, since the classes are imbalanced, accuracy alone might not be the most reliable metric for model evaluation.
 
 **For testing data:**
 
@@ -289,26 +289,26 @@ Accuracy: The overall accuracy of the model on the training data is 0.96, meanin
 
 **Analysis:**
 
-Precision: The model is very accurate at identifying non-bankrupt companies, with a precision of 97%. However, it is unable to correctly identify any bankrupt companies, as indicated by the precision of 0%.
+**Precision :**The model is very accurate at identifying non-bankrupt companies, with a precision of 97%. However, it is unable to correctly identify any bankrupt companies, as indicated by the precision of 0%.
 
-Recall: The model has a high recall for non-bankrupt companies (99%), indicating it can accurately identify them. However, it has a recall of 0% for bankrupt companies, suggesting it is unable to identify any of them correctly.
+**Recall:** The model has a high recall for non-bankrupt companies (99%), indicating it can accurately identify them. However, it has a recall of 0% for bankrupt companies, suggesting it is unable to identify any of them correctly.
 
-F1-score: The F1-score, which balances precision and recall, is high for non-bankrupt companies (98%) but is 0 for bankrupt companies, highlighting the model's inability to correctly identify any bankrupt companies.
+**F1-score:** The F1-score, which balances precision and recall, is high for non-bankrupt companies (98%) but is 0 for bankrupt companies, highlighting the model's inability to correctly identify any bankrupt companies.
 
-Accuracy: The accuracy is calculated as 0.96 or 96%. This means that the model correctly predicts the outcome for approximately 96% of the cases in the testing data.
+**Accuracy:** The accuracy is calculated as 0.96 or 96%. This means that the model correctly predicts the outcome for approximately 96% of the cases in the testing data.
 
 These metrics suggest that while the model performs well in identifying non-bankrupt companies, it is unable to correctly identify any of the bankrupt companies. This implies that the model's performance is quite imbalanced, with a strong bias towards the majority class (non-bankrupt companies).
 
 
 ### My observation after training and testing report
 
-Since my project's goal is to identify bankrupt companies, it's crucial to focus on metrics that specifically address the model's performance in correctly identifying the positive class (bankrupt companies).
+Since my **project's goal** is to **identify bankrupt companies**, it's crucial to focus on metrics that specifically address the model's performance in correctly identifying the positive class (bankrupt companies).
 
 Considering both the training and testing data analysis, I should primarily focus on improving the following key metrics:
 
-Recall: Improving the model's ability to correctly identify bankrupt companies is essential. Given the low recall for bankrupt companies in both the training and testing data, increasing this metric is critical. Enhancing recall will ensure that the model captures more bankrupt companies, reducing the instances of false negatives.
+**Recall:** Improving the model's ability to correctly identify bankrupt companies is essential. Given the low recall for bankrupt companies in both the training and testing data, increasing this metric is critical. Enhancing recall will ensure that the model captures more bankrupt companies, reducing the instances of false negatives.
 
-F1-score: Since the F1-score considers both precision and recall, enhancing this metric for bankrupt companies is necessary. By improving the F1-score, I can achieve a better balance between precision and recall for bankrupt companies, indicating a more accurate model performance.
+**F1-score:** Since the F1-score considers both precision and recall, enhancing this metric for bankrupt companies is necessary. By improving the F1-score, I can achieve a better balance between precision and recall for bankrupt companies, indicating a more accurate model performance.
 
 While accuracy provides an overall picture of the model's correctness, its reliability is limited when dealing with imbalanced datasets. Thus, focusing on improving recall and F1-score for bankrupt companies is crucial to enhancing the model's ability to correctly identify this specific class, aligning with my project goal.
 
@@ -326,7 +326,7 @@ The classification report for testing data is shown below:
 
 **Analysis:**
 
-The precision for the bankrupt class is 0.47, suggesting that only 47% of the predicted bankrupt companies were actually bankrupt.
+The precision for the bankrupt class is 0.47, suggesting that only 47% of the predicted bankrupt companies were bankrupt.
 
 The recall for the bankrupt class is 0.16, implying that the model identified only 16% of the total bankrupt companies correctly.
 
