@@ -212,7 +212,7 @@ X95 - Equity to Liability
 
 ### Different Machine Learning Models:
 
-In this section, I explore the application of multiple machine learning models, each bringing a unique approach and perspective to the problem. My goal is to evaluate, compare, and understand the performance of each model, guiding me in selecting the most effective approach for predicting company bankruptcies. Through this comparative analysis, my aim is to derive meaningful insights and enhance the robustness and accuracy of my bankruptcy prediction capabilities.
+In this section, I explore the application of multiple machine learning models, each bringing a unique approach and perspective to the problem. My goal is to evaluate, compare, and understand the performance of each model, guiding me in selecting the most effective approach for predicting company bankruptcies. Through this comparative analysis, I aim to derive meaningful insights and enhance the robustness and accuracy of my bankruptcy prediction capabilities.
 
 ## Logistic Regression:
 
@@ -226,7 +226,15 @@ and I got around **96% accuracy!**
 
 ![](Images/model_1.PNG)
 
-Sometimes, higher accuracy might be misleading due to data imbalance.
+Sometimes, higher accuracy might be misleading due to data imbalance. In this context, it would be more insightful to focus on metrics that emphasize the model's performance on the minority class (bankrupt companies). Specifically, consider prioritizing:
+
+**Recall:** This metric will tell us how well the model is identifying actual bankrupt companies. A higher recall indicates that the model is effectively capturing most of the bankrupt companies.
+
+**Precision:** Precision will inform us about the correctness of the model when it predicts a company is bankrupt. It will help in understanding the model's reliability in its positive predictions.
+
+**F1-Score:** The F1-score is a harmonic mean of precision and recall, providing a balance between the two. It is especially useful in the context of imbalanced datasets, as it considers both false positives and false negatives.
+
+Focusing on these metrics will provide a more detailed and insightful understanding of the model's performance, particularly its capability to identify bankrupt companies, which is the primary goal of this project.
 
 ### Confusion Matrix
 
