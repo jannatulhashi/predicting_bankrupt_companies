@@ -226,7 +226,7 @@ and I got around **96% accuracy!**
 
 ![](Images/model_1.PNG)
 
-Sometimes, higher accuracy might be misleading due to data imbalance. In this context, it would be more insightful to focus on metrics that emphasize the model's performance on the minority class (bankrupt companies). Specifically, consider prioritizing:
+**Sometimes, higher accuracy might be misleading due to data imbalance.** In this context, it would be more insightful to focus on metrics that emphasize the model's performance on the minority class (bankrupt companies). Specifically, consider prioritizing:
 
 **Recall:** This metric will tell us how well the model is identifying actual bankrupt companies. A higher recall indicates that the model is effectively capturing most of the bankrupt companies.
 
