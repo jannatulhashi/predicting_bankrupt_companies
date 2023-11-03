@@ -214,7 +214,7 @@ X95 - Equity to Liability
 
 In this section, I explore the application of multiple machine learning models, each bringing a unique approach and perspective to the problem. My goal is to evaluate, compare, and understand the performance of each model, guiding me in selecting the most effective approach for predicting company bankruptcies. Through this comparative analysis, my aim is to derive meaningful insights and enhance the robustness and accuracy of my bankruptcy prediction capabilities.
 
-### Logistic Regression:
+## Logistic Regression:
 
 At first, I used Logistic Regression and  Visualizing the class distribution of the target variable 'Bankrupt?' to understand the balance between the two classes.
 
@@ -222,7 +222,7 @@ At first, I used Logistic Regression and  Visualizing the class distribution of 
 
 **From the graph, it's evident that there is a significant class imbalance. The majority of the instances are non-bankrupt companies (class 0), and a much smaller proportion are bankrupt companies (class 1).**
 
-and I got around 96% accuracy!
+and I got around **96% accuracy!**
 
 ![](Images/model_1.PNG)
 
@@ -230,20 +230,139 @@ Sometimes, higher accuracy might be misleading due to data imbalance.
 
 ### Confusion Matrix
 
-I got the output of the confusion matrix for training data is: **TN: 4908  FP: 41  FN: 161  TP: 4**
+**The output represents the confusion matrix for training data.**
+
+![](Images/confusion_matrix_1.png)
 
 Here's how to interpret it:
 
-    - The number of true negatives (TN) is 4908, which indicates the number of non-bankrupt companies correctly predicted as non-bankrupt.
+    - The top-left element (4908) is the number of true negatives (TN), which indicates the number of non-bankrupt companies correctly predicted as non-bankrupt.
 
-    - The number of false positives (FP) is 41, which indicates the number of non-bankrupt companies incorrectly predicted as bankrupt.
+    - The top-right element (41) is the number of false positives (FP), which indicates the number of non-bankrupt companies incorrectly predicted as bankrupt.
 
-    - The number of false negatives (FN) is 161, which indicates the number of bankrupt companies incorrectly predicted as non-bankrupt.
+    - The bottom-left element (161) is the number of false negatives (FN), which indicates the number of bankrupt companies incorrectly predicted as non-bankrupt.
 
-    - The number of true positives (TP) is 4, which indicates the number of bankrupt companies correctly predicted as bankrupt.
+    - The bottom-right element (4) is the number of true positives (TP), which indicates the number of bankrupt companies correctly predicted as bankrupt.
 
-The the confusion matrix for testing data is: 
+And, **the output represents the confusion matrix for testing data.**
+
+![](Images/cofusion_matrix_2.PNG)
+
+Here's how to interpret it:
+
+    - True Negatives (TN): The model correctly identified 1633 instances as Non-Bankrupt Companies.
+
+    - False Positives (FP): The model incorrectly classified 17 instances as Bankrupt Companies, which were actually Non-Bankrupt Companies.
+
+    - False Negatives (FN): The model failed to identify 55 instances as Bankrupt Companies, misclassifying them as Non-Bankrupt Companies.
+
+    - True Positives (TP): The model correctly identified Bankrupt Companies. 
+
+
+### Classification Report
+
+**For training data:**
+
+![](Images/classification_report_training_analysis.PNG)
+
+**Analysis:**
+
+Precision: For the non-bankrupt companies, when the model predicts they are non-bankrupt, it's right about 97% of the time. For bankrupt companies, when the model predicts they are bankrupt, it's right only about 9% of the time.
+
+Recall: The model is very good at correctly identifying non-bankrupt companies, getting it right almost all the time (99%). However, it struggles to correctly identify bankrupt companies, getting it right only about 2% of the time.
+
+F1-score: Overall, the model is quite good at correctly identifying non-bankrupt companies, achieving a balance between precision and recall (98%). However, it has difficulty identifying bankrupt companies, with a lower score (4%).
+
+Accuracy: The overall accuracy of the model on the training data is 0.96, meaning that the model is correct in its predictions 96% of the time. However, since the classes are imbalanced, accuracy alone might not be the most reliable metric for model evaluation.
+
+**For testing data:**
+
+![](Images/classification_report_testing_analysis.PNG)
+
+**Analysis:**
+
+Precision: The model is very accurate at identifying non-bankrupt companies, with a precision of 97%. However, it is unable to correctly identify any bankrupt companies, as indicated by the precision of 0%.
+
+Recall: The model has a high recall for non-bankrupt companies (99%), indicating it can accurately identify them. However, it has a recall of 0% for bankrupt companies, suggesting it is unable to identify any of them correctly.
+
+F1-score: The F1-score, which balances precision and recall, is high for non-bankrupt companies (98%) but is 0 for bankrupt companies, highlighting the model's inability to correctly identify any bankrupt companies.
+
+Accuracy: The accuracy is calculated as 0.96 or 96%. This means that the model correctly predicts the outcome for approximately 96% of the cases in the testing data.
+
+These metrics suggest that while the model performs well in identifying non-bankrupt companies, it is unable to correctly identify any of the bankrupt companies. This implies that the model's performance is quite imbalanced, with a strong bias towards the majority class (non-bankrupt companies).
+
+
+### My observation after training and testing report
+
+Since my project's goal is to identify bankrupt companies, it's crucial to focus on metrics that specifically address the model's performance in correctly identifying the positive class (bankrupt companies).
+
+Considering both the training and testing data analysis, I should primarily focus on improving the following key metrics:
+
+Recall: Improving the model's ability to correctly identify bankrupt companies is essential. Given the low recall for bankrupt companies in both the training and testing data, increasing this metric is critical. Enhancing recall will ensure that the model captures more bankrupt companies, reducing the instances of false negatives.
+
+F1-score: Since the F1-score considers both precision and recall, enhancing this metric for bankrupt companies is necessary. By improving the F1-score, I can achieve a better balance between precision and recall for bankrupt companies, indicating a more accurate model performance.
+
+While accuracy provides an overall picture of the model's correctness, its reliability is limited when dealing with imbalanced datasets. Thus, focusing on improving recall and F1-score for bankrupt companies is crucial to enhancing the model's ability to correctly identify this specific class, aligning with my project goal.
+
+### Recommendation
+
+To improve the metrics related to correctly identifying bankrupt companies, such as recall and F1-score, I can consider using more sophisticated machine learning models that are adept at handling imbalanced datasets and capturing complex patterns. Two effective models that can help address these issues are the Random Forest Classifier and the Gradient Boosting Model.
+
+## Random Forest Classifier
+
+Next, I utilized the Random Forest algorithm. This method enhances model robustness and generalization by building and combining multiple decision trees, offering a more comprehensive and reliable prediction through its ensemble approach.
+
+The classification report for testing data is shown below:
+
+![](Images/random_forest_classification_report.PNG)
+
+**Analysis:**
+
+The precision for the bankrupt class is 0.47, suggesting that only 47% of the predicted bankrupt companies were actually bankrupt.
+
+The recall for the bankrupt class is 0.16, implying that the model identified only 16% of the total bankrupt companies correctly.
+
+The F1-score is 0.23 for the bankrupt class. These scores indicate that the model's performance in identifying bankrupt companies is relatively low.
+
+The model achieved an accuracy of approximately 97%, indicating that it correctly classified 97% of the total instances in the dataset.
+
+The results show that the model is performing well in predicting non-bankrupt companies, as indicated by high precision and recall values. However, it struggles with the bankrupt class, having low precision and recall scores. The model is more biased toward the non-bankrupt class, likely due to the imbalanced nature of the data.
+
+
+## Gradient Boosting
+
+After analyzing the results from the Random Forest model and identifying areas for improvement, I decided to explore the Gradient Boosting model next. The classification report generated thereafter provided detailed insights into the model's effectiveness in predicting company bankruptcies:
+
+![](Images/gradient_boosting_analysis.PNG)
+
+**Analysis:**
+
+Accuracy: The model demonstrates an accuracy of 90% on the test data, indicating that it correctly predicts the class labels for approximately 90% of the samples.
+
+Recall, F1-Score, and Precision: The recall for the "bankrupt" class is relatively high at 0.79, suggesting that the model correctly identifies 79% of the bankrupt companies. However, this high recall is balanced by a low precision of 0.23. This indicates that when the model predicts a company as bankrupt, it is correct only 23% of the time, resulting in a low F1-score of 0.36. These metrics collectively indicate that the model has a relatively high false positive rate for bankrupt companies.
+
+There's a substantial class imbalance in the dataset. The "non_bankrupt" class has a significantly larger number of samples compared to the "bankrupt" class. This class imbalance can affect model performance, particularly in predicting the minority class.
+
+#### I performed gradient boosting a second time to improve the model’s performance, particularly in predicting the minority class ("bankrupt"). By adjusting hyperparameters and implementing early stopping, you aimed to enhance the model’s ability to identify bankrupt companies more effectively, despite the presence of class imbalance. This iterative approach, with refined techniques, allowed for a more robust model that potentially offers improved recall and f1-score for the bankrupt class.
+
+The classification report for testing data is shown below: 
+
+![](Images/gradient_boosting_analysis_2.PNG)
+
+Following the Gradient Boosting models, I then moved towards a visual exploration to understand the feature importance better. Utilizing pie and bar charts, I aimed to visually dissect and display the significance of different features in predicting bankruptcies. These visualizations were constructed to create clear and insightful charts that emphasize the influential features, allowing for a more intuitive grasp of which financial attributes hold the most weight in the bankruptcy prediction process. This visual approach complements the previous analyses, offering a more comprehensive perspective on the model’s decision-making factors.
+
+![](Images/feature_importance_1.png)   ![](Images/feature_importance_2.PNG)
+
+**Analysis:**
+
+The above pie and bar graphs highlight the significance of various financial indicators in predicting company bankruptcies. From the graph, it's evident that the ability of a company to generate income relative to its total assets, as indicated by "NetIncomeToTotalAssets", is the paramount predictor of bankruptcy risk. This underscores the idea that companies that are effective at turning their assets into profit have a lower bankruptcy likelihood. Other key metrics, such as "TotalDebt/TotalNetWorth", hint at the role of debt management in assessing risk; companies with high debt relative to their net worth may be more vulnerable to insolvency. Additionally, operational measures like "OperatingProfitPerPerson" highlight the importance of productivity and efficiency. When a company can generate more profit per employee, it often signifies a healthy operational structure. In essence, this graph suggests that for a company to stave off bankruptcy, it should prioritize efficient asset management, maintain a manageable debt level, and foster a productive operational environment.
+
+In simple terms, companies that make good money, don't have too much debt and are efficient with their staff are in a safer position.
 
 
 
+
+
+
+ 
 
