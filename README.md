@@ -1,4 +1,4 @@
-# bankruptcy_prediction
+# Predicting Bankrupt Companies
 
 ![](Images/dataset-card.png)
 
