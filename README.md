@@ -435,7 +435,7 @@ These models are foundational and can be improved and refined over time with mor
 
 **Informed Decision-Making:**
 
-Despite their current limitations, the models can be part of a broader analytical strategy, contributing valuable insights and information for more informed decision-making in predicting and mitigating bankruptcy risks.
+Despite the limitations, the models can be part of a broader analytical strategy, contributing valuable insights and information for more informed decision-making in predicting and mitigating bankruptcy risks.
 
 
 
