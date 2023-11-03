@@ -12,7 +12,7 @@ This is the main dataset:[(https://www.kaggle.com/datasets/fedesoriano/company-b
 
 Employ different machine learning models to analyze various financial attributes from a dataset found on Kaggle, originally sourced from the Taiwan Economic Journal, with the goal of accurately predicting company bankruptcies.
 
-# Attribute Information
+### Attribute Information
  
 Column names and descriptions to make the data easier to understand (Y = Output feature, X = Input features)
 
