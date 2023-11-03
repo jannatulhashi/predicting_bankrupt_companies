@@ -359,13 +359,31 @@ There's a substantial class imbalance in the dataset. The "non_bankrupt" class h
 
 Following the Gradient Boosting models, I then moved towards a visual exploration to understand the feature importance better. Utilizing pie and bar charts, I aimed to visually dissect and display the significance of different features in predicting bankruptcies. These visualizations were constructed to create clear and insightful charts that emphasize the influential features, allowing for a more intuitive grasp of which financial attributes hold the most weight in the bankruptcy prediction process. This visual approach complements the previous analyses, offering a more comprehensive perspective on the model’s decision-making factors.
 
-![](Images/feature_importance_1.png)   ![](Images/feature_importance_2.PNG)
+![](Images/feature_importance_1.png)
 
 **Analysis:**
 
-The above pie and bar graphs highlight the significance of various financial indicators in predicting company bankruptcies. From the graph, it's evident that the ability of a company to generate income relative to its total assets, as indicated by "NetIncomeToTotalAssets", is the paramount predictor of bankruptcy risk. This underscores the idea that companies that are effective at turning their assets into profit have a lower bankruptcy likelihood. Other key metrics, such as "TotalDebt/TotalNetWorth", hint at the role of debt management in assessing risk; companies with high debt relative to their net worth may be more vulnerable to insolvency. Additionally, operational measures like "OperatingProfitPerPerson" highlight the importance of productivity and efficiency. When a company can generate more profit per employee, it often signifies a healthy operational structure. In essence, this graph suggests that for a company to stave off bankruptcy, it should prioritize efficient asset management, maintain a manageable debt level, and foster a productive operational environment.
+The pie chart visualizes the significance of various financial attributes in influencing the prediction of company bankruptcies. Each segment of the pie chart represents a different financial attribute, and the size of each segment corresponds to the importance of that attribute in the predictive model.
+
+The largest segment corresponds to "Net Income to Total Assets (X86)", illustrating its substantial influence in determining a company's bankruptcy risk. This feature essentially captures a company's profitability relative to its total assets, which is a critical factor in assessing financial stability.
+
+Other notable segments in the pie chart include "Continuous interest rate (after tax) (X10)" and "Total income/Total expense (X69)", indicating their meaningful contributions to the model's bankruptcy predictions.
+
+![](Images/feature_importance_2.PNG)
+
+**Analysis:**
+
+The bar chart complements the pie chart by providing a more straightforward comparison of the feature importances.
+
+Similar to the pie chart, "Net Income to Total Assets (X86)" stands out as a highly influential feature, as it occupies the longest bar in the chart.
+
+Other features like "Continuous interest rate (after tax) (X10)" and "Total income/Total expense (X69)" are also emphasized, confirming their roles as significant predictors in the model.
 
 In simple terms, companies that make good money, don't have too much debt and are efficient with their staff are in a safer position.
+
+**Conclusion:**
+
+The visualizations effectively convey which financial attributes are most impactful in predicting bankruptcies based on the model. They offer a clear representation, aiding in the easier interpretation of the features' roles and significance in the predictive model.
 
 ## Limitations:
 
