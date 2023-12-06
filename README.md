@@ -6,7 +6,7 @@
 
 This project utilizes a dataset found on Kaggle, originally sourced from the Taiwan Economic Journal, covering the years 1999 to 2009. It comprises various financial attributes of companies, analyzed to assess the probability of bankruptcy. Bankruptcy definitions are aligned with the business regulations established by the Taiwan Stock Exchange. The objective is to utilize machine learning models to examine these financial attributes thoroughly and accurately predict the likelihood of company bankruptcies.
 
-[This is the main dataset:](https://www.kaggle.com/datasets/fedesoriano/company-bankruptcy-prediction)
+Main Dataset: [Company Bankruptcy Prediction Dataset](https://www.kaggle.com/datasets/fedesoriano/company-bankruptcy-prediction)
 
 ## Objective
 
