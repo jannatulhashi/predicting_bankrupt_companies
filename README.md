@@ -10,7 +10,7 @@ Main Dataset: [Company Bankruptcy Prediction Dataset](https://www.kaggle.com/dat
 
 ## Objective
 
-Employ different machine learning models to analyze various financial attributes from a dataset found on Kaggle, originally sourced from the Taiwan Economic Journal, with the goal of accurately predicting company bankruptcies.
+Employ different machine learning models to analyze various financial attributes from a dataset found on Kaggle, originally sourced from the Taiwan Economic Journal, to predict company bankruptcies accurately.
 
 ### Attribute Information
  
